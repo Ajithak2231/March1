@@ -2,7 +2,7 @@
 Feature: Booking a Trip 
 				 
 
-  
+  @booking
   Scenario: Booking a  trip with valid details
     Given Launch the Url of the page
     And   Choose round trip

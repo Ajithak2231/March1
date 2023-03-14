@@ -78,13 +78,17 @@ public class First_Search_Flights extends SearchFlights {
 	}
 
 	@Then("Click Search Flights")
-	public void click_search_flights() {
+	public void click_search_flights() throws Exception  {
 		SearchFlights sf = new SearchFlights();
 		try {
 			BaseClass.click(sf.search);
+			
 		} catch (Exception e) {
 			BaseClass.log.error("Error on choosing SearchFlights " + e.getMessage());
+		}finally {
+			throw new Exception("Sample Exception");
 		}
+		
 	}
 
 }
